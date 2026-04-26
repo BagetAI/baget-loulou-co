@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loulou & Co | More Than a Walk. A Parisian Education.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hunter-green: #1B3022;
+            --antique-cream: #F5F2E8;
+            --parisian-gold: #C5A059;
+            --deep-charcoal: #2D2D2D;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant+Garamond', serif;
+            font-weight: 600;
+            color: var(--hunter-green);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 0 100px;
+            background-color: var(--white);
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 500px;
+            margin-bottom: 60px;
+            overflow: hidden;
+            border: 1px solid var(--antique-cream);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--deep-charcoal);
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--hunter-green);
+            color: var(--white);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: var(--parisian-gold);
+        }
+
+        /* Sections */
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background-color: var(--parisian-gold);
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 100px 0;
+            background-color: var(--antique-cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 50px 30px;
+            text-align: center;
+            border: 1px solid #E5E5E5;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card .price {
+            font-size: 1.2rem;
+            color: var(--parisian-gold);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            color: var(--deep-charcoal);
+        }
+
+        /* Lead Form */
+        .contact {
+            padding: 120px 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #E5E5E5;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--hunter-green);
+        }
+
+        .form-status {
+            display: none;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #E5E5E5;
+            font-size: 0.8rem;
+            color: #888;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .hero-image-container { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="https://images.squarespace-cdn.com/content/v1/5f3d47d6a5f7823e800c6d7a/1598287515431-295G7P6P6P6P6P6P6P6P/Loulou-and-Co-Logo.png" alt="Loulou & Co" class="logo" onerror="this.src='https://api.baget.ai/v1/images/minimalist-luxury-logo-design-for-loulo.png'">
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-image-container">
+                <img src="https://api.baget.ai/v1/images/professional-editorial-photography-of-a-.png" alt="Elegant Golden Retriever in Bois de Boulogne">
+            </div>
+            <h1>More Than a Walk.<br>A Parisian Education.</h1>
+            <p>Elite forest socialization and expert-led behavioral development for the discerning urban canine. Escaping the noise of Paris for the freedom of the forest.</p>
+            <a href="#book" class="cta-button">Book a Behavioral Assessment</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Boutique Canine Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Forest Escape</h3>
+                    <div class="price">From €380 / Month</div>
+                    <p>Our flagship 2+ hour off-leash adventure in the Bois de Boulogne. Includes temperature-controlled concierge transport.</p>
+                    <a href="https://buy.stripe.com/test_dRmbJ0gTS8DE1P61RF1ZS27" class="cta-button" style="padding: 12px 24px; font-size: 0.8rem;">Join the Pack</a>
+                </div>
+                <div class="service-card">
+                    <h3>Education Express</h3>
+                    <div class="price">€100 Assessment</div>
+                    <p>Focused 1:1 city lessons addressing leash manners and urban calm. Professional ACACED-certified oversight.</p>
+                    <a href="https://buy.stripe.com/test_dRmbJ0gTS8DE1P61RF1ZS27" class="cta-button" style="padding: 12px 24px; font-size: 0.8rem;">Book Assessment</a>
+                </div>
+                <div class="service-card">
+                    <h3>City Sitting</h3>
+                    <div class="price">From €65 / Day</div>
+                    <p>Premium workday care with home pick-up. A sophisticated alternative to high-volume daycare for busy professionals.</p>
+                    <a href="#book" class="cta-button" style="padding: 12px 24px; font-size: 0.8rem;">Enquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="book">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reserve Your Consultation</h2>
+                <p style="margin-top: 15px; font-size: 0.9rem;">Join the Beta Pack in the 16th, 7th, or 8th Arrondissement.</p>
+            </div>
+            <form id="lead-form">
+                <input type="text" name="name" placeholder="YOUR NAME" required>
+                <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
+                <input type="tel" name="phone" placeholder="PHONE NUMBER">
+                <input type="text" name="dog_breed" placeholder="DOG BREED & AGE">
+                <select name="service_interest">
+                    <option value="">INTERESTED IN...</option>
+                    <option value="Forest Escape">Forest Escape Membership</option>
+                    <option value="Education Express">Education Express (Training)</option>
+                    <option value="City Sitting">City Sitting (Workday Care)</option>
+                </select>
+                <textarea name="message" placeholder="TELL US ABOUT YOUR DOG'S NEEDS" rows="4"></textarea>
+                <button type="submit" class="cta-button">Send Request</button>
+            </form>
+            <div id="form-status" class="form-status"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>LOULOU & CO &copy; 2026 | PARIS, FRANCE</p>
+            <p style="margin-top: 10px; opacity: 0.6;">Heritage Luxury. Forest Freedom. Education First.</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('lead-form');
+        const status = document.getElementById('form-status');
+        const dbId = 'DATABASE_ID_PLACEHOLDER';
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(`https://baget.ai/api/public/databases/${dbId}/rows`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data })
+                });
+
+                if (response.ok) {
+                    status.innerText = 'MERCI. We will reach out within 24 hours to schedule your assessment.';
+                    status.style.display = 'block';
+                    status.style.color = '#1B3022';
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (err) {
+                status.innerText = 'Une erreur est survenue. Please try again or contact us directly.';
+                status.style.display = 'block';
+                status.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
