@@ -31,7 +31,7 @@
         }
 
         h1, h2, h3 {
-            font-family: 'Cormorant+Garamond', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
             color: var(--hunter-green);
         }
@@ -51,20 +51,20 @@
         }
 
         .logo {
-            height: 80px;
+            height: 100px;
             width: auto;
         }
 
         /* Hero */
         .hero {
             text-align: center;
-            padding: 60px 0 100px;
+            padding: 20px 0 100px;
             background-color: var(--white);
         }
 
         .hero-image-container {
             width: 100%;
-            height: 500px;
+            height: 550px;
             margin-bottom: 60px;
             overflow: hidden;
             border: 1px solid var(--antique-cream);
@@ -84,8 +84,8 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
+            font-size: 1.2rem;
+            max-width: 650px;
             margin: 0 auto 40px;
             color: var(--deep-charcoal);
             font-weight: 300;
@@ -95,7 +95,7 @@
             display: inline-block;
             background-color: var(--hunter-green);
             color: var(--white);
-            padding: 18px 40px;
+            padding: 20px 45px;
             text-decoration: none;
             font-size: 0.9rem;
             letter-spacing: 2px;
@@ -103,10 +103,12 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            font-weight: 400;
         }
 
         .cta-button:hover {
             background-color: var(--parisian-gold);
+            color: var(--white);
         }
 
         /* Sections */
@@ -146,10 +148,13 @@
 
         .service-card {
             background: var(--white);
-            padding: 50px 30px;
+            padding: 60px 30px;
             text-align: center;
             border: 1px solid #E5E5E5;
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-card:hover {
@@ -164,20 +169,22 @@
         .service-card .price {
             font-size: 1.2rem;
             color: var(--parisian-gold);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 400;
+            font-family: 'Cormorant Garamond', serif;
         }
 
         .service-card p {
             font-size: 0.95rem;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             color: var(--deep-charcoal);
+            flex-grow: 1;
         }
 
         /* Lead Form */
         .contact {
             padding: 120px 0;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
@@ -185,37 +192,43 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            background: var(--white);
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             border: 1px solid #E5E5E5;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             outline: none;
+            background-color: #FAFAFA;
         }
 
         input:focus, select:focus, textarea:focus {
             border-color: var(--hunter-green);
+            background-color: var(--white);
         }
 
         .form-status {
             display: none;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.9rem;
+            margin-top: 30px;
+            font-size: 1rem;
+            border: 1px solid var(--hunter-green);
+            font-family: 'Cormorant Garamond', serif;
         }
 
         /* Footer */
         footer {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
             border-top: 1px solid #E5E5E5;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #888;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         @media (max-width: 768px) {
@@ -228,43 +241,49 @@
 <body>
 
     <nav>
-        <img src="https://images.squarespace-cdn.com/content/v1/5f3d47d6a5f7823e800c6d7a/1598287515431-295G7P6P6P6P6P6P6P6P/Loulou-and-Co-Logo.png" alt="Loulou & Co" class="logo" onerror="this.src='https://api.baget.ai/v1/images/minimalist-luxury-logo-design-for-loulo.png'">
+        <img src="https://api.baget.ai/v1/images/minimalist-luxury-logo-design-for-loulo.png" alt="Loulou & Co Logo" class="logo">
     </nav>
 
     <section class="hero">
         <div class="container">
             <div class="hero-image-container">
-                <img src="https://api.baget.ai/v1/images/professional-editorial-photography-of-a-.png" alt="Elegant Golden Retriever in Bois de Boulogne">
+                <img src="https://api.baget.ai/v1/images/professional-editorial-photography-of-a-.png" alt="Elegant Golden Retriever in Bois de Boulogne Forest">
             </div>
             <h1>More Than a Walk.<br>A Parisian Education.</h1>
             <p>Elite forest socialization and expert-led behavioral development for the discerning urban canine. Escaping the noise of Paris for the freedom of the forest.</p>
-            <a href="#book" class="cta-button">Book a Behavioral Assessment</a>
+            <a href="#book" class="cta-button">Join the Beta Pack</a>
         </div>
     </section>
 
     <section class="services">
         <div class="container">
             <div class="section-header">
-                <h2>Boutique Canine Services</h2>
+                <h2>The Forest Escape</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Forest Escape</h3>
-                    <div class="price">From €380 / Month</div>
-                    <p>Our flagship 2+ hour off-leash adventure in the Bois de Boulogne. Includes temperature-controlled concierge transport.</p>
-                    <a href="https://buy.stripe.com/test_dRmbJ0gTS8DE1P61RF1ZS27" class="cta-button" style="padding: 12px 24px; font-size: 0.8rem;">Join the Pack</a>
+                    <div>
+                        <h3>Forest Membership</h3>
+                        <div class="price">€380 / Month</div>
+                        <p>Our flagship 2+ hour off-leash adventure in the Bois de Boulogne. Includes temperature-controlled concierge transport and real-time photo updates.</p>
+                    </div>
+                    <a href="https://buy.stripe.com/test_bJeaEWcDC2fgfFW2VJ1ZS2b" class="cta-button" style="padding: 15px 20px; font-size: 0.8rem;">Secure a Slot</a>
                 </div>
                 <div class="service-card">
-                    <h3>Education Express</h3>
-                    <div class="price">€100 Assessment</div>
-                    <p>Focused 1:1 city lessons addressing leash manners and urban calm. Professional ACACED-certified oversight.</p>
-                    <a href="https://buy.stripe.com/test_dRmbJ0gTS8DE1P61RF1ZS27" class="cta-button" style="padding: 12px 24px; font-size: 0.8rem;">Book Assessment</a>
+                    <div>
+                        <h3>Education Assessment</h3>
+                        <div class="price">€100 / Assessment</div>
+                        <p>A comprehensive 90-minute behavioral evaluation to track leash manners, recall, and urban calm. Mandatory for all new members.</p>
+                    </div>
+                    <a href="https://buy.stripe.com/test_5kQeVcdHG2fg79q9k71ZS2a" class="cta-button" style="padding: 15px 20px; font-size: 0.8rem;">Book Assessment</a>
                 </div>
                 <div class="service-card">
-                    <h3>City Sitting</h3>
-                    <div class="price">From €65 / Day</div>
-                    <p>Premium workday care with home pick-up. A sophisticated alternative to high-volume daycare for busy professionals.</p>
-                    <a href="#book" class="cta-button" style="padding: 12px 24px; font-size: 0.8rem;">Enquire</a>
+                    <div>
+                        <h3>City Sitting</h3>
+                        <div class="price">€65 / Full Day</div>
+                        <p>Premium workday care with door-to-door pick-up in the 7th, 8th, or 16th. A low-stimulus environment for peaceful supervision.</p>
+                    </div>
+                    <a href="#book" class="cta-button" style="padding: 15px 20px; font-size: 0.8rem;">Enquire Now</a>
                 </div>
             </div>
         </div>
@@ -274,21 +293,21 @@
         <div class="container">
             <div class="section-header">
                 <h2>Reserve Your Consultation</h2>
-                <p style="margin-top: 15px; font-size: 0.9rem;">Join the Beta Pack in the 16th, 7th, or 8th Arrondissement.</p>
+                <p style="margin-top: 20px; font-size: 1rem; font-weight: 300;">Applications now open for the 16th Arrondissement "Founding Members".</p>
             </div>
             <form id="lead-form">
                 <input type="text" name="name" placeholder="YOUR NAME" required>
                 <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
                 <input type="tel" name="phone" placeholder="PHONE NUMBER">
                 <input type="text" name="dog_breed" placeholder="DOG BREED & AGE">
-                <select name="service_interest">
-                    <option value="">INTERESTED IN...</option>
+                <select name="service_interest" required>
+                    <option value="">SELECT SERVICE OF INTEREST</option>
                     <option value="Forest Escape">Forest Escape Membership</option>
                     <option value="Education Express">Education Express (Training)</option>
                     <option value="City Sitting">City Sitting (Workday Care)</option>
                 </select>
-                <textarea name="message" placeholder="TELL US ABOUT YOUR DOG'S NEEDS" rows="4"></textarea>
-                <button type="submit" class="cta-button">Send Request</button>
+                <textarea name="message" placeholder="HOW CAN WE ASSIST YOU AND YOUR CANINE?" rows="5"></textarea>
+                <button type="submit" class="cta-button">Request Invitation</button>
             </form>
             <div id="form-status" class="form-status"></div>
         </div>
@@ -297,14 +316,14 @@
     <footer>
         <div class="container">
             <p>LOULOU & CO &copy; 2026 | PARIS, FRANCE</p>
-            <p style="margin-top: 10px; opacity: 0.6;">Heritage Luxury. Forest Freedom. Education First.</p>
+            <p style="margin-top: 15px; opacity: 0.5; font-size: 0.65rem;">ACACED CERTIFIED | RC PROFESSIONNELLE INSURED</p>
         </div>
     </footer>
 
     <script>
         const form = document.getElementById('lead-form');
         const status = document.getElementById('form-status');
-        const dbId = 'DATABASE_ID_PLACEHOLDER';
+        const dbId = '7905cafe-481b-4580-92d1-80bc708ff305';
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -319,15 +338,16 @@
                 });
 
                 if (response.ok) {
-                    status.innerText = 'MERCI. We will reach out within 24 hours to schedule your assessment.';
+                    status.innerText = 'MERCI. Your request has been received. Our concierge will contact you within 24 hours to schedule your canine assessment.';
                     status.style.display = 'block';
                     status.style.color = '#1B3022';
                     form.reset();
+                    form.style.display = 'none';
                 } else {
                     throw new Error('Submission failed');
                 }
             } catch (err) {
-                status.innerText = 'Une erreur est survenue. Please try again or contact us directly.';
+                status.innerText = 'An error occurred. Please contact us directly at hello@loulouandco.fr';
                 status.style.display = 'block';
                 status.style.color = 'red';
             }
